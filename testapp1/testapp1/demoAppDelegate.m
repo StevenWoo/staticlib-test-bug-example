@@ -7,11 +7,16 @@
 //
 
 #import "demoAppDelegate.h"
+#import "NSString+EscapeQueryParameters.h"
 
 @implementation demoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSString *foo = @"test";
+    NSString *escapedSearchQuery = [NSString escapeQueryParameters:foo];
+    NSLog(@"%@", escapedSearchQuery);
+
     // Override point for customization after application launch.
     return YES;
 }

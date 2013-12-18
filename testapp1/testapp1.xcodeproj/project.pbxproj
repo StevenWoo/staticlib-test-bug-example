@@ -21,6 +21,7 @@
 		4BB4DCC018616CAB003EDF01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB4DCA218616CAB003EDF01 /* UIKit.framework */; };
 		4BB4DCC818616CAB003EDF01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BB4DCC618616CAB003EDF01 /* InfoPlist.strings */; };
 		4BB4DCCA18616CAB003EDF01 /* testapp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DCC918616CAB003EDF01 /* testapp1Tests.m */; };
+		4BB4DCD718616F63003EDF01 /* libtestlibrary1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB4DCD618616F63003EDF01 /* libtestlibrary1.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4BB4DCC518616CAB003EDF01 /* testapp1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testapp1Tests-Info.plist"; sourceTree = "<group>"; };
 		4BB4DCC718616CAB003EDF01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4BB4DCC918616CAB003EDF01 /* testapp1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testapp1Tests.m; sourceTree = "<group>"; };
+		4BB4DCD618616F63003EDF01 /* libtestlibrary1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtestlibrary1.a; path = "../../../../Library/Developer/Xcode/DerivedData/testbug-gisvmznmczivnkcuelkfuqocztlv/Build/Products/Debug-iphoneos/libtestlibrary1.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB4DCD718616F63003EDF01 /* libtestlibrary1.a in Frameworks */,
 				4BB4DCA118616CAB003EDF01 /* CoreGraphics.framework in Frameworks */,
 				4BB4DCA318616CAB003EDF01 /* UIKit.framework in Frameworks */,
 				4BB4DC9F18616CAB003EDF01 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		4BB4DC9D18616CAB003EDF01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BB4DCD618616F63003EDF01 /* libtestlibrary1.a */,
 				4BB4DC9E18616CAB003EDF01 /* Foundation.framework */,
 				4BB4DCA018616CAB003EDF01 /* CoreGraphics.framework */,
 				4BB4DCA218616CAB003EDF01 /* UIKit.framework */,
@@ -381,7 +385,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testapp1/testapp1-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../testlibrary1/**",
+				);
 				INFOPLIST_FILE = "testapp1/testapp1-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/testbug-gisvmznmczivnkcuelkfuqocztlv/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,7 +408,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testapp1/testapp1-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"../testlibrary1/**",
+				);
 				INFOPLIST_FILE = "testapp1/testapp1-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/testbug-gisvmznmczivnkcuelkfuqocztlv/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -461,6 +485,7 @@
 				4BB4DCCF18616CAB003EDF01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4BB4DCD018616CAB003EDF01 /* Build configuration list for PBXNativeTarget "testapp1Tests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +494,7 @@
 				4BB4DCD218616CAB003EDF01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
